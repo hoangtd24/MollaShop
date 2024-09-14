@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\Molla\\Molla.csproj": {}
+    "D:\\C#\\MollaShop\\Molla.csproj": {}
   },
   "projects": {
-    "D:\\C#\\Molla\\Molla.csproj": {
+    "D:\\C#\\MollaShop\\Molla.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\Molla\\Molla.csproj",
+        "projectUniqueName": "D:\\C#\\MollaShop\\Molla.csproj",
         "projectName": "Molla",
-        "projectPath": "D:\\C#\\Molla\\Molla.csproj",
+        "projectPath": "D:\\C#\\MollaShop\\Molla.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\Molla\\obj\\",
+        "outputPath": "D:\\C#\\MollaShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

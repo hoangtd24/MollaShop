@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Molla.Models;
 using Molla.Services;
 using MyApplication.Data;
@@ -16,8 +17,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequireNonAlphanumeric = false;
     options.SignIn.RequireConfirmedAccount = true;
-}
-).AddEntityFrameworkStores<ApplicationDbContext>();
+})
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Configure the Application Cookie settings
 builder.Services.ConfigureApplicationCookie(options =>
@@ -60,6 +62,12 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapAreaControllerRoute(
+    name: "admin",
+    pattern: "{controller=Home}/{action=Index}/{id?}",
+    areaName: "Admin"
+);
 app.MapRazorPages();
 
 app.Run();

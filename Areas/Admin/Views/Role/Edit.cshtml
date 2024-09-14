@@ -1,0 +1,23 @@
+@model Molla.Models.ApplicationRoles;
+
+@{
+    ViewData["Title"] = "Chỉnh sửa quyền truy cập";
+}
+<form asp-action="Edit" method="post">
+    <div class="card-body">
+        <input class="form-control" placeholder="Role Name" asp-for="Id" hidden>
+        <div class="form-group">
+            <label for="exampleInputEmail1" asp-for="Name">Role name</label>
+            <input class="form-control" id="exampleInputEmail1" placeholder="Role Name" asp-for="Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <input class="form-control" placeholder="Description" asp-for="Description">
+        </div>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

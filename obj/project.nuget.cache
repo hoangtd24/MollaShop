@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8c6kVgtCQwVwS/OZ3N6/5+eRzxLUu2UiJ+Ot4yt3DYPUWjMekIyiENttZELLDj2c3nJHJE5NG/QRtpcuuWLJFg==",
+  "dgSpecHash": "/nL6z39dmNo84JO0c6xSjEs32PfB/lQYmsN4a/8xKfZx99UqzTNb002J5Hv+LbGXgMWvqtMgbDi3QCNZJTDClw==",
   "success": true,
-  "projectFilePath": "D:\\C#\\Molla\\Molla.csproj",
+  "projectFilePath": "D:\\C#\\MollaShop\\Molla.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

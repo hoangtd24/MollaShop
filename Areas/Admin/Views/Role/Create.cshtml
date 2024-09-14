@@ -1,0 +1,22 @@
+@model Molla.Areas.Admin.Models.Roles.CreateRoleViewModel;
+
+@{
+    ViewData["Title"] = "Thêm quyền truy cập";
+}
+<form asp-action="Create" method="post">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="exampleInputEmail1" asp-for="RoleName">Role name</label>
+            <input class="form-control" id="exampleInputEmail1" placeholder="Role Name" asp-for="RoleName">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <input class="form-control" placeholder="Description" asp-for="Description">
+        </div>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
