@@ -53004,9 +53004,13 @@ a.text-muted:hover {
 
 .dark-mode .dark-mode.accent-gray-dark .page-item .page-link:hover, .dark-mode .dark-mode.accent-gray-dark .page-item .page-link:focus {
   color: #3f474e;
+
 }
 
 .dark-mode .border-dark {
   border-color: #4b545c !important;
 }
 /*# sourceMappingURL=adminlte.css.map */
+
+/* mycss */
+

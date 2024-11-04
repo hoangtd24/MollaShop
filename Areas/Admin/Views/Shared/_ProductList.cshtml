@@ -1,0 +1,60 @@
+@model IEnumerable<Molla.Models.Product>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BestSeller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BestSeller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CatName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-sm btn-primary">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger" >Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

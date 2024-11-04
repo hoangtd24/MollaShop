@@ -1,0 +1,199 @@
+@model IEnumerable<Molla.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+<div class="container-fluid px-3 pt-4">
+    <div class="d-flex justify-content-between">
+        <div>
+            <select id="categoryId" class="custom-select" asp-items="ViewBag.CategoryId">
+                <option value="0">Select category</option>
+            </select>
+        </div>
+        <a class= "btn btn-outline-success btn-lg mb-3" asp-action="Create">Create New</a>
+    </div>
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BestSeller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        <a asp-area = "Admin" asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductId">
+                                @Html.DisplayFor(modelItem => item.ProductName)
+                        </a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BestSeller)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CatName)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-sm btn-primary">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-sm btn-danger" >Delete</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            // Load initial products
+                //loadProducts(0);
+                $('#categoryId').change(function () {
+                        var categoryId = $(this).val();
+                        console.log(categoryId);
+                        $("#categoryId option").removeAttr("selected");
+                        $("#categoryId > [value=" + categoryId + "]").attr("selected", true);
+                        loadProducts(categoryId);
+                    });
+                function loadProducts(CateId) {
+                    $.ajax({
+                        url: '@Url.Action("SortProduct", "Product")',
+                        dataType: 'json',
+                        type: 'GET',
+                        data: {
+                            CateId: CateId,
+                        },
+                        success: function (result) {
+                            window.location.href = result.url;
+                        }
+                    });
+                }
+            });
+        
+    </script>
+}
+
+@* @model Molla.Models.Product
+
+@{
+    ViewData["Title"] = "Chỉnh sửa sản phẩm";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid px-3">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" asp-route-id="@Model.ProductId">
+        <div class="product-header">
+            <img src="/uploads/@Model.Thumb" alt="@Model.ProductName" height="80" width="80"/>
+            <div class="product-info">
+                <h2>
+                @Html.DisplayFor(model => model.ProductName)
+                </h2>
+                <p>
+                Code: #@Html.DisplayFor(model => model.ProductId)
+                </p>
+            </div>
+            <button class="edit-btn" type="submit">
+                <i class="fas fa-edit">
+                </i>
+                Save
+            </button>
+        </div>
+        <br/>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="card">
+            <div class="card-body">
+                <input asp-for="ProductId" class="form-control" hidden /> 
+                <div class="form-group">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ShortDesc" class="control-label"></label>
+                    <input asp-for="ShortDesc" class="form-control" />
+                    <span asp-validation-for="ShortDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CategoryId" class="control-label"></label>
+                    <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Thumb" class="control-label"></label>
+                    <input type="file" class="form-control" asp-for="Thumb" name="Thumb"/>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BestSeller" /> @Html.DisplayNameFor(model => model.BestSeller)
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <!-- Summernote -->
+    <script src="~/plugins/summernote/summernote-bs4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#Description').summernote({
+                height: 200,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
+                ]
+            });
+        });
+    </script>
+} *@

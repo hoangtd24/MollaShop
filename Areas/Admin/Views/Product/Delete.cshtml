@@ -1,0 +1,19 @@
+@model Molla.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid px-3">
+    <br/>
+    <h2>Delete</h2>
+
+    <h5>Are you sure you want to delete this?</h5>
+    <br/>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

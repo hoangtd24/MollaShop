@@ -1,0 +1,53 @@
+@model IEnumerable<Molla.Models.Category>
+
+@{
+    ViewData["Title"] = "Danh sách danh mục";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid px-3 pt-4">
+    <a class="btn btn-outline-success btn-lg mb-3" asp-area="Admin" asp-controller="Category" asp-action="Create">Tạo mới</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CatName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Published)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Alias)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.CategoryId">
+                        @Html.DisplayFor(modelItem => item.CatName)
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alias)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-sm btn-primary">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>

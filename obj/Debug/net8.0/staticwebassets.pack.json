@@ -897,6 +897,10 @@
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
     },
     {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\navbar.html",
+      "PackagePath": "staticwebassets\\navbar.html"
+    },
+    {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\plugins\\bootstrap-colorpicker\\css\\bootstrap-colorpicker.css",
       "PackagePath": "staticwebassets\\plugins\\bootstrap-colorpicker\\css\\bootstrap-colorpicker.css"
     },
@@ -8831,6 +8835,42 @@
     {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\plugins\\uplot\\uPlot.min.css",
       "PackagePath": "staticwebassets\\plugins\\uplot\\uPlot.min.css"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\apple.jpg",
+      "PackagePath": "staticwebassets\\uploads\\apple.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\beef.jpg",
+      "PackagePath": "staticwebassets\\uploads\\beef.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\fried-chicken.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fried-chicken.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\hamburger.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hamburger.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\mango.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mango.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\thit-bo.jpg",
+      "PackagePath": "staticwebassets\\uploads\\thit-bo.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\watermelon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\watermelon.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Molla.Microsoft.AspNetCore.StaticWebAssets.props",

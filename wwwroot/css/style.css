@@ -98,7 +98,7 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	outline: none;
-	color: #ffffff;
+	/* color: #ffffff; */
 }
 
 ul,
@@ -2905,7 +2905,29 @@ ol {
 	font-size: 18px;
 	letter-spacing: 2px;
 }
+.my-file-input{
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+.my-file-input::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 6px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
 
+.my-file-input::file-selector-button:hover {
+  background: #0d45a5;
+}
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1200px) {
@@ -3471,4 +3493,40 @@ ol {
 	.blog__details__hero__text h2 {
 		font-size: 24px;
 	}
+}
+
+.product-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #fff;
+	border-bottom: 1px solid #e9ecef;
+}
+.product-header img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.product-header .product-info {
+	flex-grow: 1;
+	margin-left: 20px;
+}
+.product-header .product-info h2 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 600;
+}
+.product-header .product-info p {
+	margin: 0;
+	color: #6c757d;
+}
+.product-header .edit-btn {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
 }

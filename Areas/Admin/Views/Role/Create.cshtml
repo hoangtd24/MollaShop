@@ -3,20 +3,33 @@
 @{
     ViewData["Title"] = "Thêm quyền truy cập";
 }
-<form asp-action="Create" method="post">
-    <div class="card-body">
-        <div class="form-group">
-            <label for="exampleInputEmail1" asp-for="RoleName">Role name</label>
-            <input class="form-control" id="exampleInputEmail1" placeholder="Role Name" asp-for="RoleName">
-        </div>
-        <div class="form-group">
-            <label asp-for="Description">Description</label>
-            <input class="form-control" placeholder="Description" asp-for="Description">
-        </div>
-    </div>
-    <!-- /.card-body -->
 
-    <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+<div class="content-header">
+    <div class="container-fluid">
+    <div class="mb-2">
+        <div class="col-sm-6">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller= "Role" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+    <form asp-action="Create" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1" asp-for="RoleName">Role name</label>
+                <input class="form-control" id="exampleInputEmail1" placeholder="Role Name" asp-for="RoleName">
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Description</label>
+                <input class="form-control" placeholder="Description" asp-for="Description">
+            </div>
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>

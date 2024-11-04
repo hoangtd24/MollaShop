@@ -3,6 +3,18 @@
 @{
     ViewData["Title"] = "Chỉnh sửa quyền truy cập";
 }
+<div class="content-header">
+    <div class="container-fluid">
+    <div class="mb-2">
+        <div class="col-sm-6">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller= "Role" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
 <form asp-action="Edit" method="post">
     <div class="card-body">
         <input class="form-control" placeholder="Role Name" asp-for="Id" hidden>
