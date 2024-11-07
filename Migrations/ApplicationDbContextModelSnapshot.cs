@@ -256,6 +256,28 @@ namespace Molla.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Molla.Models.Photo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Photos");
+                });
+
             modelBuilder.Entity("Molla.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
@@ -296,9 +318,6 @@ namespace Molla.Migrations
 
                     b.Property<string>("ShortDesc")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Thumb")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductId");
@@ -359,6 +378,17 @@ namespace Molla.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Molla.Models.Photo", b =>
+                {
+                    b.HasOne("Molla.Models.Product", "Product")
+                        .WithMany("Photos")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Molla.Models.Product", b =>
                 {
                     b.HasOne("Molla.Models.Category", "Category")
@@ -368,6 +398,11 @@ namespace Molla.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Molla.Models.Product", b =>
+                {
+                    b.Navigation("Photos");
                 });
 #pragma warning restore 612, 618
         }

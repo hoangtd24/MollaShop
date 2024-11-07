@@ -601,6 +601,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\indexAdmin.html",
+      "PackagePath": "staticwebassets\\indexAdmin.html"
+    },
+    {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
@@ -895,6 +899,10 @@
     {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\lib\\waypoints\\waypoints.min.js",
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\modals.html",
+      "PackagePath": "staticwebassets\\modals.html"
     },
     {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\navbar.html",
@@ -8841,20 +8849,76 @@
       "PackagePath": "staticwebassets\\uploads\\apple.jpg"
     },
     {
-      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana.jpg",
-      "PackagePath": "staticwebassets\\uploads\\banana.jpg"
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana-2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana-2.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana-3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana-3.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana-4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana-4.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana-5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana-5.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana-6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana-6.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\banana1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banana1.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\beef-2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\beef-2.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\beef-3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\beef-3.jpg"
     },
     {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\beef.jpg",
       "PackagePath": "staticwebassets\\uploads\\beef.jpg"
     },
     {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\default.jfif",
+      "PackagePath": "staticwebassets\\uploads\\default.jfif"
+    },
+    {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\fried-chicken.jpg",
       "PackagePath": "staticwebassets\\uploads\\fried-chicken.jpg"
     },
     {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape-1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape-1.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape-2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape-2.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape-3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape-3.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape-4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape-4.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape-5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\grape-5.jpg"
+    },
+    {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\grape.jpg",
       "PackagePath": "staticwebassets\\uploads\\grape.jpg"
+    },
+    {
+      "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\hamburger-1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\hamburger-1.jpg"
     },
     {
       "Id": "D:\\C#\\MollaShop\\wwwroot\\uploads\\hamburger.jpg",

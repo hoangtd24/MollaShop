@@ -7,7 +7,6 @@ public class Product{
     [Key]
     public int ProductId {set; get;}
     public string ProductName {set; get;} = string.Empty;
-    public string? Thumb {set; get;}
     public string ShortDesc {set; get;} = string.Empty;
     public string Description {set; get;} = string.Empty;
     public string Alias {set; get;} = string.Empty;
@@ -20,5 +19,6 @@ public class Product{
     public int CategoryId {set; get;}
     public Category? Category {set; get;}
 
+    public List<Photo> Photos {get; set;} = new List<Photo>();
 
 }

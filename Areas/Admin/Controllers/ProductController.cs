@@ -48,15 +48,11 @@ namespace MollaShop.Areas.Admin.Controllers
         }
 
         // GET: Product/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var product = await _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Photos)
                 .FirstOrDefaultAsync(m => m.ProductId == id);
             if (product == null)
             {
@@ -89,7 +85,6 @@ namespace MollaShop.Areas.Admin.Controllers
                     string? name = await Utilities.UploadFile(ThumbFile, fileName);
                     if (name != null)
                     {
-                        product.Thumb = name;
                         product.DateCreated = DateTime.Now;
                         product.DateModify = DateTime.Now;
                         product.Alias = Utilities.GenerateSlug(product.ProductName);
@@ -112,7 +107,9 @@ namespace MollaShop.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products
+                                    .Include(p => p.Photos)
+                                    .FirstOrDefaultAsync(p=> p.ProductId == id);
             if (product == null)
             {
                 return NotFound();
@@ -149,7 +146,7 @@ namespace MollaShop.Areas.Admin.Controllers
                     if (Thumb != null)
                     {
                         Console.WriteLine("aaaa", Thumb.FileName);
-                        string oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", existingProduct.Thumb);
+                        string oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
 
                         // Delete the old image file if it exists
                         if (System.IO.File.Exists(oldImagePath))
@@ -159,16 +156,8 @@ namespace MollaShop.Areas.Admin.Controllers
                         string extension = Path.GetExtension(Thumb.FileName);
                         string fileName = Utilities.GenerateSlug(product.ProductName) + extension;
                         string? name = await Utilities.UploadFile(Thumb, fileName);
-                        if (name != null)
-                        {
-                            product.Thumb = name;
-                        }
+                        
                     }
-                    else
-                    {
-                        product.Thumb = existingProduct.Thumb;
-                    }
-
                     // Cập nhật các thuộc tính khác của sản phẩm
                     product.DateModify = DateTime.Now;
                     // Cập nhật vào DbContext và lưu thay đổi

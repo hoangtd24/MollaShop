@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Molla")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13595102131c97b99658c950d2e4e4096c2a4927")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a391c747be30f3ddd1e0b15f90a2adf21d58ce2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Molla")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Molla")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
